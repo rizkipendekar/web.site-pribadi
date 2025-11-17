@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* BODY PAKAI WALLPAPER FOTO SENDIRI */
+body {
+    background: url('.vscode/Screenshot 2025-11-17 090336.png') center/cover no-repeat fixed;
+    color: #333;
+}
+
+
+/* NAVBAR */
+.navbar {
+    box-shadow: 0 2px 10px rgba(235, 115, 115, 0.1);
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('.vscode/foto 2025-11-17 090910.png')
+                center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-attachment: fixed;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 0;
+}
+
+/* ABOUT */
+.about {
+    background-color: #fff;
+}
+
+/* TEAM */
+.team-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+.team-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* CONTACT */
+.contact-item {
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+    background: #212529 !important;
+}
+
+/* HERO BUTTON */
+.hero .btn {
+    transition: all 0.3s ease;
+}
+.hero .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Image Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        padding: 20px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    section {
+        padding: 60px 0;
+    }
+}
