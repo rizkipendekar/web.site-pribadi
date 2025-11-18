@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand fw-bold text-primary" href="#home">
-                    <i class="fas fa-shield-alt"></i> PAGAR NUSA
+                    <i class="fas fa-shield-alt"></i> PAGAR NUSA KARANGWINONGAN
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -66,56 +66,205 @@
         </div>
     </section>
 
-    <!-- TEAM -->
-    <section id="team" class="team py-5 bg-gray-100">
+    <!-- VIDEO SECTION -->
+    <section id="video" class="video py-5 bg-gray-100">
         <div class="container">
-            <h2 class="text-center display-5 fw-bold mb-5 text-primary">ANGGOTA KAMI</h2>
-            <div class="team-list row">
-                <div class="team-card col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src=".vscode/foto 2025-11-17 090910.png" class="card-img-top" alt="foto">
-                        <div class="card-body text-center">
-                            <h3 class="card-title fw-bold">FOTO BERSAMA</h3>
-                            <p class="card-text text-muted">PAGAR NUSA </p>
-                            <div class="social-icons">
-                                <a href="#" class="text-primary me-2"><i class="fab fa-github"></i></a>
-                                <a href="#" class="text-info me-2"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
-                            </div>
+            <h2 class="text-center display-5 fw-bold mb-5 text-primary">Video Kami</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p class="fs-5 mb-4">
+                        Saksikan video dokumentasi dan kegiatan Pagar Nusa ranting Karangwinongan.
+                    </p>
+                    <!-- Video Thumbnail -->
+                    <div class="video-thumbnail position-relative" style="cursor:pointer;" onclick="playVideo()">
+                        <img src=".vscode/Screenshot 2025-11-17 121551.png" alt="Video Thumbnail" class="img-fluid rounded shadow-lg w-100">
+                        <div class="play-button-overlay position-absolute top-50 start-50 translate-middle">
+                            <i class="fas fa-play-circle" style="font-size:60px; color:rgb(73, 221, 98); text-shadow: 0 2px 4px rgba(0,0,0,0.5);"></i>
                         </div>
                     </div>
-                </div>
-                <div class="team-card col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src=".vscode/pnnu.jpg" class="card-img-top" alt="foto">
-                        <div class="card-body text-center">
-                            <h3 class="card-title fw-bold">FOTO BARENG</h3>
-                            <p class="card-text text-muted">KENANGAN</p>
-                            <div class="social-icons">
-                                <a href="#" class="text-primary me-2"><i class="fab fa-dribbble"></i></a>
-                                <a href="#" class="text-info me-2"><i class="fab fa-behance"></i></a>
-                                <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-card col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src=".vscode/Screenshot 2025-11-17 090336.png" class="card-img-top" alt="foto">
-                        <div class="card-body text-center">
-                            <h3 class="card-title fw-bold">FOTO BARENG</h3>
-                            <p class="card-text text-muted">KENANGAN</p>
-                            <div class="social-icons">
-                                <a href="#" class="text-primary me-2"><i class="fab fa-github"></i></a>
-                                <a href="#" class="text-info me-2"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
+                    <div class="video-description mt-3">
+                        <p class="text-muted">Klik pada gambar untuk memutar video dokumentasi kegiatan Pagar Nusa.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- VIDEO MODAL -->
+    <div id="videoModal" class="modal">
+        <span class="close" onclick="closeVideoModal()">&times;</span>
+        <div class="modal-content-video">
+            <video id="modalVideo" width="50%" height="30" controls>
+                <source src=".vscode/vidio.pakem.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- TEAM -->
+ <section id="team" class="team py-5 bg-gray-50">
+    <style>
+        .team-card img {
+            height: 150px;      /* FOTO DIPERKECIL */
+            object-fit: cover; /* Agar gambar tetap rapi */
+            width: 100%;
+            border-radius: 2% 2px 0 0;
+        }
+    </style>
+
+    <div class="container">
+        <h2 class="text-center display-5 fw-bold mb-5 text-primary">ANGGOTA KAMI</h2>
+
+        <div class="team-list row">
+
+            <!-- FOTO 1 -->
+            <div class="team-card col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src=".vscode/foto.png" class="card-img-top" alt="foto">
+                    <div class="card-body text-center">
+                        <h3 class="card-title fw-bold">
+                            "Solidaritas tanpa batas. Bersama saudara-saudara Pagar Nusa menjaga silaturahmi"
+                        </h3>
+                        <p class="card-text text-muted">PAGAR NUSA</p>
+                        <div class="social-icons">
+                            <a href="#" class="text-primary me-2"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-info me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOTO 2 -->
+            <div class="team-card col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src=".vscode/foto1.png" class="card-img-top" alt="foto">
+                    <div class="card-body text-center">
+                        <h3 class="card-title fw-bold">
+                            “Setiap latihan adalah langkah menuju kedisiplinan dan persaudaraan yang lebih kuat.”
+                        </h3>
+                        <p class="card-text text-muted">KENANGAN</p>
+                        <div class="social-icons">
+                            <a href="#" class="text-primary me-2"><i class="fab fa-dribbble"></i></a>
+                            <a href="#" class="text-info me-2"><i class="fab fa-behance"></i></a>
+                            <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOTO 3 -->
+            <div class="team-card col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src=".vscode/Screenshot 2025-11-17 090336.png" class="card-img-top" alt="foto">
+                    <div class="card-body text-center">
+                        <h3 class="card-title fw-bold">
+                            “Kebersamaan adalah kekuatan kami. Pagar Nusa selalu kompak dalam suka dan duka.”
+                        </h3>
+                        <p class="card-text text-muted">KENANGAN</p>
+                        <div class="social-icons">
+                            <a href="#" class="text-primary me-2"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-info me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOTO 4 -->
+            <div class="team-card col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src=".vscode/foto ukt leting2.jpg" class="card-img-top" alt="foto">
+                    <div class="card-body text-center">
+                        <h3 class="card-title fw-bold">Deskripsi kegiatan anggota Pagar Nusa dalam momen kebersamaan.</h3>
+                        <p class="card-text text-muted">“Momen berharga yang menguatkan persaudaraan.”</p>
+                        <div class="social-icons">
+                            <a href="#" class="text-primary me-2"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-info me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- FOTO 5 -->
+            <div class="team-card col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src=".vscode/pilar 4.png" class="card-img-top" alt="foto">
+                    <div class="card-body text-center">
+                        <h3 class="card-title fw-bold">Deskripsi kegiatan anggota Pagar Nusa dalam momen kebersamaan.</h3>
+                        <p class="card-text text-muted">“Momen berharga yang menguatkan persaudaraan.”</p>
+                        <div class="social-icons">
+                            <a href="#" class="text-primary me-2"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-info me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <!-- FOTO 6 -->
+            <div class="team-card col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src=".vscode/pliar 4 foto 2.png" class="card-img-top" alt="foto">
+                    <div class="card-body text-center">
+                        <h3 class="card-title fw-bold">Deskripsi kegiatan anggota Pagar Nusa dalam momen kebersamaan.</h3>
+                        <p class="card-text text-muted">“Momen berharga yang menguatkan persaudaraan.”</p>
+                        <div class="social-icons">
+                            <a href="#" class="text-primary me-2"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-info me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- FOTO 7 -->
+            <div class="team-card col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src=".vscode/latihan 1.png" class="card-img-top" alt="foto">
+                    <div class="card-body text-center">
+                        <h3 class="card-title fw-bold">Deskripsi kegiatan anggota Pagar Nusa dalam momen kebersamaan.</h3>
+                        <p class="card-text text-muted">“Momen berharga yang menguatkan persaudaraan.”</p>
+                        <div class="social-icons">
+                            <a href="#" class="text-primary me-2"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-info me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- FOTO 8 -->
+            <div class="team-card col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src=".vscode/foto tes akhir.png" class="card-img-top" alt="foto">
+                    <div class="card-body text-center">
+                        <h3 class="card-title fw-bold">Deskripsi kegiatan anggota Pagar Nusa dalam momen kebersamaan.</h3>
+                        <p class="card-text text-muted">“Momen berharga yang menguatkan persaudaraan.”</p>
+                        <div class="social-icons">
+                            <a href="#" class="text-primary me-2"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-info me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <!-- FOTO 9 -->
+            <div class="team-card col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src=".vscode/foto123.png" class="card-img-top" alt="foto">
+                    <div class="card-body text-center">
+                        <h3 class="card-title fw-bold">Deskripsi kegiatan anggota Pagar Nusa dalam momen kebersamaan.</h3>
+                        <p class="card-text text-muted">“Momen berharga yang menguatkan persaudaraan.”</p>
+                        <div class="social-icons">
+                            <a href="#" class="text-primary me-2"><i class="fab fa-github"></i></a>
+                            <a href="#" class="text-info me-2"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section>
+
 
     <!-- CONTACT -->
     <section id="contact" class="contact py-5 bg-white">
@@ -218,6 +367,27 @@
         // Function to close modal
         function closeModal() {
             document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Function to play video
+        function playVideo() {
+            const videoModal = document.getElementById('videoModal');
+            const modalVideo = document.getElementById('modalVideo');
+            modalVideo.load(); // Reload the video
+            videoModal.style.display = 'block';
+            // Play the video after a short delay to ensure it's loaded
+            setTimeout(() => {
+                modalVideo.play().catch(e => console.log('Autoplay prevented: ', e));
+            }, 100);
+        }
+
+        // Function to close video modal
+        function closeVideoModal() {
+            const videoModal = document.getElementById('videoModal');
+            const modalVideo = document.getElementById('modalVideo');
+            modalVideo.pause();
+            modalVideo.currentTime = 0;
+            videoModal.style.display = 'none';
         }
     </script>
 
