@@ -51,4 +51,63 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Video functionality for multiple videos
+function playVideo(videoId) {
+    console.log("Playing video with ID:", videoId); // Debugging line
+    
+    const videoModal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    
+    // Set video source based on videoId
+    let videoSource = '';
+    switch(videoId) {
+        case 1:
+            // Video 1 - Dokumentasi Kegiatan
+            videoSource = '.vscode/12345.mp4';
+            break;
+        case 2:
+            // Video 2 - Latihan Rutin
+            videoSource = '.vscode/vidio 123.mp4';
+            break;
+        case 3:
+            // Video 3 - Acara Khusus
+            videoSource = '.vscode/12345.mp4';
+            break;
+        default:
+            videoSource = '.vscode/12345.mp4';
+    }
+    
+    // Update the source of the video element
+    const sourceElement = modalVideo.querySelector('source');
+    if (sourceElement) {
+        sourceElement.src = videoSource;
+    } else {
+        // If no source element exists, create one
+        modalVideo.innerHTML = `<source src="${videoSource}" type="video/mp4">Your browser does not support the video tag.`;
+    }
+    
+    modalVideo.load(); // Reload the video
+    videoModal.style.display = 'block';
+    
+    // Play the video after a short delay to ensure it's loaded
+    setTimeout(() => {
+        modalVideo.play().catch(e => console.log('Autoplay prevented: ', e));
+    }, 100);
+}
+
+// Function to close video modal
+function closeVideoModal(event) {
+    const videoModal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    
+    if (modalVideo) {
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+    }
+    
+    if (videoModal) {
+        videoModal.style.display = 'none';
+    }
+}
+
 // Image modal functionality is now handled in index.html

@@ -75,29 +75,119 @@
                     <p class="fs-5 mb-4">
                         Saksikan video dokumentasi dan kegiatan Pagar Nusa ranting Karangwinongan.
                     </p>
-                    <!-- Video Thumbnail -->
-                    <div class="video-thumbnail position-relative" style="cursor:pointer;" onclick="playVideo()">
-                        <img src=".vscode/Screenshot 2025-11-17 121551.png" alt="Video Thumbnail" class="img-fluid rounded shadow-lg w-100">
-                        <div class="play-button-overlay position-absolute top-50 start-50 translate-middle">
-                            <i class="fas fa-play-circle" style="font-size:60px; color:rgb(73, 221, 98); text-shadow: 0 2px 4px rgba(0,0,0,0.5);"></i>
+                </div>
+            </div>
+            
+            <!-- Video Cards Grid -->
+            <div class="row">
+                <!-- Video Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm video-card">
+                        <div class="position-relative" style="cursor:pointer;" onclick="playVideo(1)">
+                            <img src=".vscode/Screenshot 2025-11-17 121551.png" alt="Video Dokumentasi Kegiatan" class="card-img-top" style="height: 200px; object-fit: cover;">
+                            <div class="play-button-overlay position-absolute top-50 start-50 translate-middle">
+                                <div class="play-icon-container">
+                                    <i class="fas fa-play-circle" style="font-size:70px; color:rgba(73, 221, 98, 0.8); text-shadow: 0 4px 8px rgba(0,0,0,0.6);"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dokumentasi Kegiatan</h5>
+                            <p class="card-text text-muted">Video dokumentasi kegiatan Pagar Nusa Karangwinongan.</p>
+                            <small class="text-muted d-block mt-2">media ranting karangwinongan</small>
                         </div>
                     </div>
-                    <div class="video-description mt-3">
-                        <p class="text-muted">Klik pada gambar untuk memutar video dokumentasi kegiatan Pagar Nusa.</p>
+                </div>
+                
+                <!-- Video Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm video-card">
+                        <div class="position-relative" style="cursor:pointer;" onclick="playVideo(2)">
+                            <img src=".vscode/latihan 1.png" alt="Latihan Rutin Anggota" class="card-img-top" style="height: 200px; object-fit: cover;">
+                            <div class="play-button-overlay position-absolute top-50 start-50 translate-middle">
+                                <div class="play-icon-container">
+                                    <i class="fas fa-play-circle" style="font-size:70px; color:rgba(73, 221, 98, 0.8); text-shadow: 0 4px 8px rgba(0,0,0,0.6);"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Latihan Rutin</h5>
+                            <p class="card-text text-muted">Latihan rutin anggota Pagar Nusa Karangwinongan.</p>
+                            <small class="text-muted d-block mt-2">media ranting karangwinongan</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm video-card">
+                        <div class="position-relative" style="cursor:pointer;" onclick="playVideo(3)">
+                            <img src=".vscode/foto123.png" alt="Acara Khusus Organisasi" class="card-img-top" style="height: 200px; object-fit: cover;">
+                            <div class="play-button-overlay position-absolute top-50 start-50 translate-middle">
+                                <div class="play-icon-container">
+                                    <i class="fas fa-play-circle" style="font-size:70px; color:rgba(73, 221, 98, 0.8); text-shadow: 0 4px 8px rgba(0,0,0,0.6);"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">latihan rutin</h5>
+                            <p class="card-text text-muted">Latihan rutin anggota Pagar Nusa Karangwinongan.</p>
+                            <small class="text-muted d-block mt-2">media ranting karangwinongan</small>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- VIDEO MODAL -->
-    <div id="videoModal" class="modal">
-        <span class="close" onclick="closeVideoModal()">&times;</span>
-        <div class="modal-content-video">
-            <video id="modalVideo" width="50%" height="30" controls>
-                <source src=".vscode/vidio.pakem.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    <!-- VIDEO MODAL 1 -->
+    <div id="videoModal1" class="modal" onclick="closeVideoModal(1, event)">
+        <span class="close" onclick="closeVideoModal(1, event)">&times;</span>
+        <div class="modal-content-video" onclick="event.stopPropagation()">
+            <div class="video-wrapper position-relative">
+                <video id="modalVideo1" width="100%" controls>
+                    <source src=".vscode/vidioo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Prominent Close Button on Video -->
+                <button class="btn-close-video" onclick="closeVideoModal(1, event)">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIDEO MODAL 2 -->
+    <div id="videoModal2" class="modal" onclick="closeVideoModal(2, event)">
+        <span class="close" onclick="closeVideoModal(2, event)">&times;</span>
+        <div class="modal-content-video" onclick="event.stopPropagation()">
+            <div class="video-wrapper position-relative">
+                <video id="modalVideo2" width="100%" controls>
+                    <source src=".vscode/vidio 123.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Prominent Close Button on Video -->
+                <button class="btn-close-video" onclick="closeVideoModal(2, event)">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIDEO MODAL 3 -->
+    <div id="videoModal3" class="modal" onclick="closeVideoModal(3, event)">
+        <span class="close" onclick="closeVideoModal(3, event)">&times;</span>
+        <div class="modal-content-video" onclick="event.stopPropagation()">
+            <div class="video-wrapper position-relative">
+                <video id="modalVideo3" width="100%" controls>
+                    <source src=".vscode/12345.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Prominent Close Button on Video -->
+                <button class="btn-close-video" onclick="closeVideoModal(3, event)">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
         </div>
     </div>
 
@@ -300,7 +390,7 @@
                                     <div class="contact-item">
                                         <i class="fas fa-map-marker-alt fa-2x text-success mb-3"></i>
                                         <h5>Lokasi</h5>
-                                        <p class="text-muted">Karangwinongan</p>
+                                        <p class="text-muted"><a href="https://maps.app.goo.gl/SeA8fVxnobBUJE2t6" class="text-decoration-none">Jl. Raya Mojolengkeng Kp. Dukuh Kuno Dusun Kaler Kec. Mojoagung Kab. Jombang</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -316,10 +406,8 @@
         <div class="container">
             <p>&copy; 2025 PAGAR NUSA GASMI KARANGWINONGAN. All Rights Reserved.</p>
             <div class="social-links mt-3">
-                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/pagarnusakarangwinongan" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/6287753394770" class="text-white" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </footer>
@@ -370,9 +458,9 @@
         }
 
         // Function to play video
-        function playVideo() {
-            const videoModal = document.getElementById('videoModal');
-            const modalVideo = document.getElementById('modalVideo');
+        function playVideo(videoId) {
+            const videoModal = document.getElementById('videoModal' + videoId);
+            const modalVideo = document.getElementById('modalVideo' + videoId);
             modalVideo.load(); // Reload the video
             videoModal.style.display = 'block';
             // Play the video after a short delay to ensure it's loaded
@@ -382,9 +470,9 @@
         }
 
         // Function to close video modal
-        function closeVideoModal() {
-            const videoModal = document.getElementById('videoModal');
-            const modalVideo = document.getElementById('modalVideo');
+        function closeVideoModal(videoId, event) {
+            const videoModal = document.getElementById('videoModal' + videoId);
+            const modalVideo = document.getElementById('modalVideo' + videoId);
             modalVideo.pause();
             modalVideo.currentTime = 0;
             videoModal.style.display = 'none';
