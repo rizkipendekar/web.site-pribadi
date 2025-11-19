@@ -108,6 +108,43 @@ function closeVideoModal(event) {
     if (videoModal) {
         videoModal.style.display = 'none';
     }
+    
+}
+
+// Image modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all images that should open in modal
+    const images = document.querySelectorAll('.card-img-top');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const captionText = document.getElementById('caption');
+    
+    // Add click event to each image
+    images.forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        });
+    });
+    
+    // Close modal when clicking on X
+    document.querySelector('.close').onclick = function() { 
+        modal.style.display = 'none';
+    };
+    
+    // Close modal when clicking outside the image
+    modal.onclick = function(event) {
+        if (event.target !== modalImg) {
+            modal.style.display = 'none';
+        }
+    };
+});
+
+// Function to close modal
+function closeModal() {
+    document.getElementById('imageModal').style.display = 'none';
 }
 
 // Image modal functionality is now handled in index.html
